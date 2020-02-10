@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyFirstDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_USER">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECION" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="MyFirstDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_USER" EntityType="Self.T_USER" />
+  </EntityContainer>
+</Schema>
